@@ -7,7 +7,6 @@ from flask import Flask, request, abort
 
 app = Flask(__name__)
 
-
 @app.route("/", methods=['GET'])
 def basic_url():
     return 'hello'
