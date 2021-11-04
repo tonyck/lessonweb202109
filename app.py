@@ -2,15 +2,20 @@
 
 
 from __future__ import unicode_literals
-
+# 引入套件
 from flask import Flask, request, abort
-
+# 初始化Flask物件
 app = Flask(__name__)
 
 
 @app.route("/", methods=['GET'])
 def basic_url():
-    return '<h1>賴田捕手第 20 天</h1><p>全身都是肌肉沒半點腦子。反正，那就是鄭尼那晚照顧的草泥馬。我完全無法了解，我發誓我沒辦法。</p>'
+    return '<h1>Hello Python!</h1><p>網站架在Heroku上</p>'
+
+
+@app.route("/map/w01-6", methods=['GET'])
+def map_w01_6():
+    return app.send_static_file('W01-6.html')
 
 
 if __name__ == "__main__":
